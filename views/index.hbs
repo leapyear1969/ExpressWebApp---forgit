@@ -1,0 +1,64 @@
+<head>
+    <style>
+    .lengh{
+        width:300px;
+    }
+    .btn{
+        width: 330;
+        height: 20;
+    }
+    </style>
+
+
+</head>
+<h1>{{title}}</h1>
+{{#if isAuthenticated }}
+<p>Hello {{username}}！</p>
+<p><font color="red" size="5">免责声明：<br>本站点内提供的服务并非微软或者世纪互联授权，因此微软或者世纪互联无法对本站点的运行结果进行任何保证，请知悉。<br>
+请您评估后再决定是否要使用本站点的服务。<br>
+如果您决定使用本站点的服务，强烈建议您先进行多次测试（如使用测试账号进行小批量测试），根据测试结果再决定是否用于生产环境。</font></p>
+{{!-- <a href="/users/id">View ID token claims</a> --}}
+<br>
+<p>批量清除运行的工作流需要您的环境ID和工作流ID，我们可以通过方式方式获取:
+<br>
+<br>
+https://make.powerautomate.cn/environments/<span style="background-color: hsl(58, 100%, 50%);">64b53608-f2f3-41da-9093-67e246d0d078</span>/flows/<span style="background-color: hsl(58, 100%, 50%);">754ac2b9-23ff-444b-88b4-3e4d110d0a06</span>/details </p>
+<br> 
+<img src="https://www.majun.fun:197/apps/files_sharing/publicpreview/w8Cf9BFXpeyKFER?file=/&fileId=2867&x=600&y=300&a=true">
+<br>
+<br>
+<form action="/submit" method="post">
+    <b>环境ID:</b> <input type="text" id="env_id" class="lengh">
+
+    <b>流程ID:</b> <input type="text" id="flow_id" class="lengh">
+
+<br>
+<p>点击提交清除正在运行的流</p>
+<br>
+    <input type="submit" value="提交" style="width: 70px;height:40px">
+</form>
+
+<br> 
+<br> 
+<p>由于每次点击最多清除250条数据，如果数据条目较多，需要多次点击</p>
+
+
+
+
+<p>点击提交清除正在运行的流</p><a href="/auth/acquireToken"><button style="width: 70px;height:40px">提交2</button></a>
+
+
+<br>
+<br> 
+<br> 
+<a href="/auth/signout">退出登录</a>
+{{else}}
+<p>Welcome to {{title}}</p>
+<a href="/auth/signin">Sign in</a>
+{{/if}}
+
+<script type="text/javaScript">
+    function sbData(){
+        alert(document.getElementById(env_id))
+    }
+</script>

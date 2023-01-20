@@ -1,0 +1,35 @@
+<h1>Microsoft Graph API</h1>
+<h3>当前正在运行的automate flow集合:</h3>
+
+<h4>请选择您的环境：<h4>
+
+<form >
+
+
+<table>
+    <tbody>
+        {{!-- {{#each profile}}
+        <tr>
+            <td>{{@key}}</td>
+            <td>{{this}}</td>
+        </tr>
+        {{/each}} --}}
+
+        {{#each profile}}
+        <tr>
+            <td>
+                {{this}}
+            </td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>
+<br>
+<a href="/auth/acquireToken">再次提交</a>
+<br>
+
+<br>
+<a href="/">返回主页</a>
+
+{{!-- http://www.tutorialsavvy.com/2013/10/using-handlebar-template-for-json-response.html/ --}}
